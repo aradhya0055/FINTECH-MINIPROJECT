@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Branch Rate Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Branch Rate Manager</h1>
+  </header>
+
+  <main>
+    <!-- 🔁 Rate Update Form -->
+    <section id="rate-update">
+      <h2>Update Branch Rate</h2>
+      <form id="updateForm">
+        <label for="branchId">Branch ID:</label>
+        <input type="number" id="branchId" name="branchId" required />
+
+        <label for="newRate">New Rate:</label>
+        <input type="number" id="newRate" name="newRate" step="0.01" required />
+
+        <button type="submit">Update Rate</button>
+      </form>
+    </section>
+
+    <!-- 🌲 Branch Tree Display -->
+    <section id="branches">
+      <h2>Branch Hierarchy</h2>
+      <ul id="branchTree" class="tree-view"></ul>
+    </section>
+
+    <!-- 🏙️ Accounts by City -->
+    <section id="accounts">
+      <h2>Accounts by City Branch</h2>
+      <input type="number" id="accountBranchId" placeholder="Enter Branch ID" />
+      <button>Fetch Accounts</button>
+      <div id="accountList"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
